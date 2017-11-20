@@ -1,0 +1,60 @@
+// general typographic elements like paragraphs, lists, etc
+
+.text {
+  &--xxl    { font-size: $s1; }
+  &--xl     { font-size: $s1; }
+  &--lg     { font-size: $s0; }
+  @include bp(lg){
+    &--xxl    { font-size: $s3; }
+    &--xl     { font-size: $s2; }
+    &--lg     { font-size: $s1; }
+  }
+  &--sm     { font-size: $s-1; font-weight: 400; }
+  &--left   { text-align: left; }
+  &--right  { text-align: right; }
+  &--center { text-align: center; }
+  &--white  { color: $white; }
+  &--black  { color: $text; }
+  &--dark   { color: $text-dark; }
+  &--blue   { color: $theme-blue; }
+  &--cyan   { color: $theme-cyan; }
+  &--green  { color: $theme-green; }
+
+}
+
+.line-length {
+  display: inline-block;  max-width: 40rem;
+  &--lg { display: inline-block;  max-width: 47rem; }
+  &--sm { display: inline-block;  max-width: 30rem; }
+}
+
+
+// -------- general element styles --------
+
+.page__content {
+  * + p               { padding-top: $s1; }
+  * + ul,
+  * + ol               { padding-top: $s-4; }
+  li                   { list-style-position: outside; margin-left: $s2; }
+  li + li              { padding-top: $s-4; }
+  ul li                { list-style-type: disc; }
+  ol li                { list-style-type: decimal; }
+  em                   { font-style: italic; font-weight: 400; }
+  strong               { font-weight: 700; }
+  a[href]:not([class]) {
+    color: $orange;
+    @include transition;
+    &:hover { color: $orange-darker; }
+  }
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: $grey-lightest;
+  margin: $s1 0;
+  .title + & { padding-top: 0; margin-top: $s1; }
+}
+.hr {
+  &--center { width: 80px; margin-left: auto; margin-right: auto; }
+}

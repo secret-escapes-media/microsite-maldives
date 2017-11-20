@@ -1,0 +1,91 @@
+---
+layout: standard
+id: overview
+title: Overview
+nav-order: 1
+
+
+
+banner:
+  title: >
+    <div class="title title--super title--sm title--upper title--bold title--kerning-lg">Discover</div>
+    <h1 class="title title--display title--display-size title--italic">The Maldives</h1>
+
+
+
+intro: >
+  <p class="text--xl">An ecological paradise and the standard-bearer for luxury, the Maldives is a destination that simply defies belief. Scattered across the Indian Ocean in remote atolls, this island nation is not only a wonderland for diving and sailing, but a place rich in culture and passionate about conservation. Digs range from low-slung bungalows that let the views do the talking, to sprawling over-water villas that give the fantasy scenery a run for its money.</p>
+
+
+
+topics:
+
+  - title: Mind-blowing luxury
+    id: luxury
+    description: Out-of-this-world infinity pools, bespoke spa journeys, sunset cruises and of course - fronds of lavish over-water villas that lead straight to a turquoise lagoon. Go to the Maldives expecting your every whim to be indulged and you’ll find that the staff are always one step ahead.
+    link:
+
+  - title: A world beneath the water
+    id: underwater
+    description: With a bewildering array of fauna to be seen, from manta rays to whale sharks, plus wreck diving, dolphin-spotting and submarine adventures, the impossibly clear waters of the Maldives are an unforgettable thrill to explore.
+    link:
+
+  - title: Maldivian fine dining
+    id: dining
+    description: Explore vibrant dishes influenced by the flavours of South India and Southeast Asia. Try freshly caught local seafood, drink from coconuts, tour on-island herb gardens and keep things interesting with signature dining, from rustic Italian pizzerias to oceanside sushi bars.
+    link:
+
+---
+
+
+
+<div class="section vpad--xxl">
+
+  <div class="row row--padding text--center">
+    {{page.intro}}
+  </div>
+
+  <div class="space--xxl"></div>
+
+  <div class="row row--padding">
+    {% assign page-topics = page.topics %}
+    {% for topic in page-topics %}
+      <div class="bob">
+        <div class="bob__image">
+          <a href="{{site.baseurl}}/{{topic.link}}"><div class="bg-img bg-img--3-2 bg-img--rounded" style="background-image: url('{{site.baseurl}}/img/content/overview/{{topic.id}}.jpg');"></div></a>
+        </div>
+        <div class="bob__text">
+          <div class="title title--bold title--kerning title--md title--upper {% cycle 'title--grad-blue', 'title--grad-cyan', 'title--grad-green'  %}">{{topic.title}}</div>
+          <p class="text--lg">{{topic.description}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+
+  <div class="row row--padding vpad--md text--center">
+    <h3 class="title title--light title--xl title--lined title--italic title--display">Guides to the Maldives</h3>
+  </div>
+
+
+  <div class="row row--padding row--4-4-4-gutters">
+  {% assign site-guides = site.html_pages | where: 'layout', 'guide' | sort: 'group-order' %}
+  {% for guide in site-guides %}
+    <div class="col">
+      {% include components/guide.html %}
+    </div>
+  {% endfor %}
+  </div>
+
+  <div class="space--xxl"></div>
+
+
+  {% assign editors-review = site.html_pages | where: 'id', 'editors-review' %}
+  {% for review in editors-review %}
+  <div class="row row--padding text--center">
+    <h3 class="title title--light title--md title--lined title--italic title--display">{{ review.intro }}</h3>
+    <a href="{{site.baseurl}}{{review.url}}" class="btn btn--orange">Read our editor's review</a>
+  </div>
+  {% endfor %}
+
+</div>

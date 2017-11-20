@@ -1,0 +1,116 @@
+---
+layout: standard
+id: editors-review
+title: Editors Review
+nav-order: 3
+
+
+
+banner:
+  title-super: Editors Review
+  title: >
+    <h1 class="title title--xxxxxl title--display title--italic">Vivanta by Taj</h1>
+
+
+
+intro: Our editor in Asia reviews the Vivanta by Taj island resort.
+
+
+
+review:
+
+  - content: >
+      <p>&ldquo;You just missed the octopus&rdquo;, we&rsquo;re told as we&rsquo;re helped off the speedboat and plucked away from a team of six or seven immaculately uniformed Taj staff there to welcome us.</p>
+
+  - image: image.jpg
+    image-layout: right
+    content: >
+      <p>Before we left Mal&eacute;, I had wondered whether an island situated only 45 minutes across the water would have the same filmic beauty as the more remote resorts, but outside the airport, there it was: that hyper-turquoise water, signalling that paradise doesn&rsquo;t necessarily require chartering a seaplane. By the time we reach Vivanta by Taj - Coral Reef, we&rsquo;ve raced over the sapphire deep, with arcs of flying fish occasionally breaking the calm surface around us, and nothing in sight except strands of over-water villas extending from distant shores.</p>
+
+  - content: >
+      <p>I can almost forgive the octopus for torpedoing its way out of sight once we make our way along the jetty. Already, keen stingrays are hovering in the shallows in anticipation of the evening&rsquo;s feeding session, soon to be followed by a rabble of lightning-fast blue fish and baby black-tip sharks. As someone who&rsquo;d ordinarily bolt at the word shark, let me reassure you that the ones you find here are the good-natured sort. There are no dead-eyed man-eaters to worry about.</p>
+      <p>It&rsquo;s said that the Maldives is one of the most challenging places on the planet to operate a resort. During the monsoon, the storms can be ferocious, and at certain times of year, the jetty has to be moved to the opposite side of the island. And yet, like any Maldives resort worth its white coralline sands, the house reef and lagoon are teeming with life. If you&rsquo;re not sure about diving, a snorkel and a pair of flippers are all you need to experience the riot of colour under the water. Even the sunken shipwreck that lies ten metres from the beach is visible from the top on clear days.</p>
+
+  - image: banner.jpg
+    image-layout: banner
+
+  - content: >
+      <p>Check-in is swift and conducted in the discreet Deluxe Delight Beach villa. Families with young children tend to favour these rooms for the space they offer and toddler-friendly, dry-land setting, but the romance factor is high. At the front, full-height glass doors open out onto a furnished deck, tree-slung hammock and a duo of beach loungers. Inside, it&rsquo;s the little details that give the villa its edge: extensive aromatherapy pillow menu, all-natural bathroom products in generous supply, two showers - one indoor, one in a walled outdoor courtyard - and pure-white bath towels that can be wrapped around a person three times, or two people once (is that something honeymooners do?).</p>
+      <p>I&rsquo;m beach-bound immediately and only emerge from the chrysalis of my hammock when I&rsquo;m distracted by a rustle in the palm branches above. Flying foxes. These turn out to be as commonplace as the herons that potter about outside the main restaurant, Latitude, with one eye on the dinner plates. When we sit down to order later, I can empathise. It&rsquo;s hard not to ogle the other tables when the menu is as good as this: an ingredients-led celebration of Maldivian, Indian and pan-Asian flavours.</p>
+
+  - image: image.jpg
+    image-2: image.jpg
+    image-layout: double
+
+  - content: >
+      <p>Buffet monotony can quickly induce claustrophobia on other islands. Here, it&rsquo;s a daily-changing &agrave; la carte curation, with alternative dining offered in the way of stone-baked pizzas and South American cuisine at Open - The Grill for no extra charge. The team are passionate: at breakfast, the pancake chef wants to know if I enjoyed his multi-grain, chocolate-slathered (there are good intentions in there somewhere) creation. The next day, he politely meanders by the table to ask if I&rsquo;d like another round.</p>
+
+  - image: image.jpg
+    image-layout: left
+    content: >
+      <p>The pace is so slow and relaxed in the Maldives that a spa treatment at Jiva Spa stands out like a colossal task on the day&rsquo;s agenda. I&rsquo;m booked in for a 45-minute couples&rsquo; spa treatment, before which, I pinpoint my aches and knots to the highly experienced spa manager - a specialist in reflexology and dermatology. Nothing artificial is used here. The therapists soothe skin with indigenous coconut oil and address a wide spectrum of complaints - from poor sleep to muscular pains and stress - with potent essential oils. Pre-treatment, we&rsquo;re served an uplifting detox tea - sweet with sugar cane molasses - then ushered to a luxurious, marble-clad suite where we change into fetching robes and woven spa sandals. The massage puts me into a trance and the next day, I wake up feeling as rested as if I&rsquo;d been on a week-long retreat.</p>
+
+  - content: >
+      <p>That&rsquo;s really the point of this mellow resort. It&rsquo;s not so hell-bent on serenity and quietude that it&rsquo;s lost its sense of fun (there&rsquo;s a pool table, table tennis, family-friendly watersports and swinging daybeds by the shore), but within a day or two, it&rsquo;s impossible not to feel your shoulders drop away from your ears. You get the feeling that nothing much could go wrong at the Taj, primarily because of the outstanding service provided by the staff, some of whom have been keeping things running smoothly for over twenty years. In fact, they&rsquo;re so hospitable that it almost comes as a surprise that we can&rsquo;t stay indefinitely. Still, if we must leave - at least it means hopping back on the speedboat for one last, this-is-living ride across the ocean.</p>
+
+---
+
+
+
+<div class="section review">
+  {% for review in page.review %}
+
+    {% if review.image-layout == 'left' or review.image-layout == 'right' or review.image-layout == 'double' %}
+      <div class="row row--xl row--padding row--6-6-gutters">
+    {% elsif review.image-layout == 'banner' %}
+      <div class="row row--100 section review__banner" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{review.image}});">
+    {% else %}
+      <div class="row row--xl row--padding">
+    {% endif %}
+
+      {% if review.image-layout == 'double' %}
+        <div class="col review__image bg-img bg-img--4-3" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{review.image}});"></div>
+        <div class="col review__image bg-img bg-img--4-3" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{review.image-2}});"></div>
+      {% endif %}
+
+      {% if review.image-layout == 'left' %}
+        <div class="col review__image bg-img bg-img--4-3" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{review.image}});"></div>
+      {% endif %}
+
+      {% if review.content %}
+        <div class="col review__content text--lg">{{review.content}}</div>
+      {% endif %}
+
+      {% if review.image-layout == 'right' %}
+        <div class="col review__image bg-img bg-img--4-3" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{review.image}});"></div>
+      {% endif %}
+
+    </div>
+  {% endfor %}
+</div>
+
+
+
+<div class="section review__banner" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/banner.jpg);"></div>
+
+
+
+<div class="section bg--light-grey">
+
+  <div class="row row--padding vpad--md text--center">
+    <h3 class="title title--italic title--xl title--display title--lined">Our Featured Maldives Offer</h3>
+  </div>
+
+  <div class="row row--padding">
+    {% assign offers = site.data.offers | where:'id','vivanta-by-taj-coral-reef' %}
+    {% for offer in offers %}
+      {% include components/offer-lg.html %}
+    {% endfor %}
+
+  </div>
+
+  <div class="row row--padding text--center">
+    <a href="{{site.baseurl}}/offers" class="btn btn--orange">View all offers</a>
+  </div>
+
+</div>

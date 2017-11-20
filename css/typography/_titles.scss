@@ -1,0 +1,109 @@
+// Title & headline styles
+
+.title {
+  font-family: $font-family-headline-02;
+  line-height: 1.2;
+  color: $headline;
+  .text--white & { color: white; }
+
+  &--display {
+    font-family: $font-family-headline-01;
+    line-height: 1;
+  }
+
+  &--core {
+    font-family: $font-family;
+    line-height: 1.25;
+  }
+
+  &--color { color: $headline; }
+
+  & + *         { padding-top: .75em; }
+  &--sub        { padding-top: 0 !important; }
+  &--super + *  { padding-top: 0 !important; }
+  &--light      { font-weight: 300; }
+  &--bold       { font-weight: 500; }
+  &--bolder     { font-weight: 600; }
+  &--kerning    { letter-spacing: .15em; }
+  &--kerning-lg { letter-spacing: .3em; }
+  &--tight      { line-height: .9; }
+  &--tighter    { line-height: .8; }
+  &--capital    { text-transform: capitalize; }
+  &--upper      { text-transform: uppercase; }
+  &--italic     { font-style: italic; }
+
+  &--display-size { font-size: $s8; }
+  &--xxxxxl       { font-size: $s7; }
+  &--xxxxl        { font-size: $s7; }
+  &--xxxl         { font-size: $s7; }
+  &--xxl          { font-size: $s6; }
+  &--xl           { font-size: $s5; }
+  &--lg           { font-size: $s4; }
+  &--md           { font-size: $s3; }
+  &--sm           { font-size: $s2; }
+  &--xs           { font-size: $s1; }
+  &--xxs          { font-size: $s0; }
+  &--xxxs         { font-size: $s-1; }
+
+  @include bp(md){
+    &--display-size { font-size: $s11; }
+    &--xxxxxl       { font-size: $s11; }
+    &--xxxxl        { font-size: $s10; }
+    &--xxxl         { font-size: $s9; }
+    &--xxl          { font-size: $s8; }
+    &--xl           { font-size: $s7; }
+    &--lg           { font-size: $s6; }
+    &--md           { font-size: $s5; }
+    &--sm           { font-size: $s4; }
+    &--xs           { font-size: $s3; }
+    &--xxs          { font-size: $s2; }
+    &--xxxs         { font-size: $s1; }
+  }
+
+  @include bp(lg){
+    &--display-size { font-size: $s13; }
+  }
+
+
+
+
+  &--grad-blue {
+    background: -webkit-linear-gradient(left, #4bb7cc, #383b8c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &--grad-cyan {
+    background: -webkit-linear-gradient(left, #53b6d7, #277ca1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &--grad-green {
+    background: -webkit-linear-gradient(left, #b7cc4b, #3b8c38);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+  $line-width: 100px;
+  &--lined {
+    position: relative;
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -2px;
+      height: 4px;
+      width: $line-width;
+      border-top: 1px solid $grey-lighter;
+      border-bottom: 1px solid $grey-lighter;
+    }
+    &:before { left: -$line-width; }
+    &:after { right: -$line-width; }
+  }
+
+}

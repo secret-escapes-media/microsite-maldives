@@ -1,0 +1,46 @@
+---
+layout: standard
+id: offers
+title: Offers
+nav-order: 4
+
+
+
+intro: >
+  <p class="text--xl">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. </p>
+
+
+---
+
+
+
+<div class="section">
+
+  <div class="row row--padding text--center">
+    {{page.intro}}
+  </div>
+
+  <div class="space--xl"></div>
+
+  <div class="row row--padding">
+    {% include components/offers.html %}
+  </div>
+
+</div>
+
+
+
+<section class="section offer-promo vpad--xxxl">
+  <div class="offer-promo__bgs">
+    <div class="offer-promo__bg" style="background-image: url('{{ site.baseurl }}/img/offers/00-general-current-sales/01.jpg')"></div>
+    <div class="offer-promo__bg" style="background-image: url('{{ site.baseurl }}/img/offers/00-general-current-sales/02.jpg')"></div>
+    <div class="offer-promo__bg" style="background-image: url('{{ site.baseurl }}/img/offers/00-general-current-sales/03.jpg')"></div>
+  </div>
+  <div class="row row--padding row--xxl offer-promo__content text--white">
+    <h2 class="title title--core title--lg title--light">That’s not all we do...</h2>
+    <div>
+      <p class="text--xl">Didn’t see anything to take your fancy? Well, we have loads more offers with savings of up to 70%!</p>
+      <a href="https://www.secretescapes.com/current-sales" class="btn btn--orange">See All Current Sales</a>
+    </div>
+  </div>
+</section>

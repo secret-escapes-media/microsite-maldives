@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include page/head.html %}
+
+  <body id="top" class="page--{{page.id}} layout--{{page.layout}}" data-current-page="{{page.id}}"{% if page.group %} data-current-group="{{page.group}}"{% endif %}>
+
+    {% include page/tracking.html %}
+
+    {% include page/header.html %}
+
+    {{ content }}
+
+    {% include page/footer.html %}
+
+    {% include modal/modal.html %}
+
+  </body>
+
+</html>

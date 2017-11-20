@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% if page.layout == 'guide' %}
+  {% include page/banner-guide.html %}
+{% else %}
+  {% include page/banner.html %}
+{% endif %}
+
+<div class="page__content">
+  {{ content }}
+</div>
+
+{% unless page.id == 'offers' %}{% include page/competition-promo.html %}{% endunless %}

@@ -1,0 +1,73 @@
+// points of interest on the destination pages and featured across the site
+
+
+.pois {
+  text-align: center;
+}
+.poi {
+  max-width: $sm;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $s4;
+  @include bp(lg){
+    display: inline-block;
+    width: 50%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    vertical-align: top;
+  }
+  @include bp(xxl){
+    width: 33.33%;
+  }
+}
+
+.featured-poi {
+  margin-bottom: $s2;
+
+  @include layout(12 1/2);
+  @include bp(md){
+    @include gallery(6);
+    margin-bottom: gutter(12);
+  }
+  @include bp(xl){
+    @include gallery(4);
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: $white;
+    background-color: rgba($grey-darkest,.5);
+    @include transition;
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: $z-content;
+      padding-top: 22.25%;
+      padding-left: $s2;
+      padding-right: $s2;
+      @include transition;
+      .csstransforms.csstransforms3d & {
+        top: 50%;
+        padding-top: 0;
+        transform: translateY(-50%);
+      }
+    }
+    &:hover {
+      .title { letter-spacing: 0.175em; }
+      background-color: rgba($grey-darkest,.66);
+    }
+  }
+  &--overview {
+    font-size: .75em;
+    .title {
+      padding-left: .5em;
+      padding-right: .5em;
+    }
+  }
+}
