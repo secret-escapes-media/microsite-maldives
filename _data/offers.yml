@@ -22,31 +22,21 @@
 
 
 
-- title: X’tan Ha – The Waterfront Resort
-  id: x-tan-ha-the-waterfront-resort
-  location: Ambergris Caye, Belize
-  description: A blissful villa stay at a Belize beach resort
-  price: 103
+- title: Intimate Maldives escape
+  id: intimate-maldives-escape
+  location: smartline Eriyadu, North Malé Atoll
+  description: Revive yourself at a pristine Maldives island resort
+  price: 1299
+  price-description: per person for 7 nights
+  saved: 30
+  link: https://www.secretescapes.com/intimate-maldives-escape-smartline-eriyadu-north-male-atoll/sale?gce_bfpop=0&utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=Maldives_Nov2017
+
+- title: Adaaran Prestige Vadoo
+  id: adaaran-prestige-vadoo
+  location: South Malé Atoll, Maldives
+  description: Over-water villas at a barefoot-luxe Maldivian paradise, with half board and speedboat transfers
+  price: 467
   price-description: per villa per night
-  saved: 22
-  link:
-
-- title: Costa Blu Adults Only Beach Resort
-  id: costa-blu-adults-only-beach-resort
-  location: Ambergris Caye, Belize
-  description: A sea view suite near the Belize Barrier Reef
-  price: 95
-  price-description: per suite per night
-  saved: 52
-  link:
-
-- title: Belizean Shores
-  id: belizean-shores
-  location: Ambergris Caye, Belize
-  description: A sun-kissed Caribbean-island beach resort
-  price: 83
-  price-description: per suite per night
-  saved: 22
-  link:
-
+  saved: 59
+  link: https://www.secretescapes.com/adaaran-prestige-vadoo-south-male-atoll-maldives/sale?utm_source=SE_MEDIA&utm_medium=Hub&utm_campaign=Maldives_Nov2017
 
