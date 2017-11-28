@@ -4,12 +4,15 @@
   &--xxl    { font-size: $s1; }
   &--xl     { font-size: $s1; }
   &--lg     { font-size: $s0; }
+  &--md     { font-size: $s0*1.1; }
   @include bp(lg){
     &--xxl    { font-size: $s3; }
     &--xl     { font-size: $s2; }
     &--lg     { font-size: $s1; }
   }
   &--sm     { font-size: $s-1; font-weight: 400; }
+  &--bold       { font-weight: 600; }
+  &--bolder     { font-weight: 800; }
   &--left   { text-align: left; }
   &--right  { text-align: right; }
   &--center { text-align: center; }
@@ -20,11 +23,30 @@
   &--cyan   { color: $theme-cyan; }
   &--green  { color: $theme-green; }
 
+  &--quote  {
+    .page__content * + & {
+      margin-top: $s1;
+      padding-top: 0;
+    }
+    padding-left: 1em;
+    font-style: italic;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 3px; height: 100%;
+      background-color: $theme-blue;
+      left: 0;
+    }
+  }
+
 }
 
 .line-length {
   display: inline-block;  max-width: 40rem;
   &--lg { display: inline-block;  max-width: 47rem; }
+  &--md { display: inline-block;  max-width: 38rem; }
   &--sm { display: inline-block;  max-width: 30rem; }
 }
 

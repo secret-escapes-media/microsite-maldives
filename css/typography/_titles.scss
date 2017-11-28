@@ -19,8 +19,8 @@
   &--color { color: $headline; }
 
   & + *         { padding-top: .75em; }
-  &--sub        { padding-top: 0 !important; }
-  &--super + *  { padding-top: 0 !important; }
+  &--sub        { padding-top: .15em !important; }
+  &--super + *  { padding-top: .15em !important; }
   &--light      { font-weight: 300; }
   &--bold       { font-weight: 500; }
   &--bolder     { font-weight: 600; }
@@ -45,7 +45,10 @@
   &--xxs          { font-size: $s0; }
   &--xxxs         { font-size: $s-1; }
 
+  &--guidebanner { font-size: $s6; }
+
   @include bp(md){
+    &--guidebanner  { font-size: $s8; }
     &--display-size { font-size: $s11; }
     &--xxxxxl       { font-size: $s11; }
     &--xxxxl        { font-size: $s10; }
@@ -61,6 +64,7 @@
   }
 
   @include bp(lg){
+    &--guidebanner  { font-size: $s9; }
     &--display-size { font-size: $s13; }
   }
 

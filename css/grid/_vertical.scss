@@ -35,6 +35,24 @@
   &--lg    { padding-top: $s6; padding-bottom: $s6; }
   &--md    { padding-top: $s4; padding-bottom: $s4; }
   &--sm    { padding-top: $s2; padding-bottom: $s2; }
+  &-bottom {
+    &--xxxxl { padding-bottom: $s14; }
+    &--xxxl  { padding-bottom: $s12; }
+    &--xxl   { padding-bottom: $s10; }
+    &--xl    { padding-bottom: $s8; }
+    &--lg    { padding-bottom: $s6; }
+    &--md    { padding-bottom: $s4; }
+    &--sm    { padding-bottom: $s2; }
+  }
+  &-top {
+    &--xxxxl { padding-top: $s14; }
+    &--xxxl  { padding-top: $s12; }
+    &--xxl   { padding-top: $s10; }
+    &--xl    { padding-top: $s8; }
+    &--lg    { padding-top: $s6; }
+    &--md    { padding-top: $s4; }
+    &--sm    { padding-top: $s2; }
+  }
 }
 
 // add in the occasional space for internal content

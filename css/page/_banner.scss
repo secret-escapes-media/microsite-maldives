@@ -18,6 +18,8 @@ $core-nav-height-sm:  $s8;
   &__content {
     display: table-cell;
     vertical-align: middle;
+    text-shadow: 0 0 35px rgba($grey-darkest,0.6);
+    .page--overview & { text-shadow: 0 0 35px rgba(76,92,117,0.6); }
   }
   &__bg {
     position: absolute;
@@ -44,10 +46,6 @@ $core-nav-height-sm:  $s8;
     }
 
     .banner{
-      &__bg {
-        left: $s4;
-        right: $s4;
-      }
       &__nav {
         bottom: auto;
         top: $core-nav-height-sm;

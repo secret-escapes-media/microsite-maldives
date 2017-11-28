@@ -23,17 +23,14 @@ topics:
   - title: Mind-blowing luxury
     id: luxury
     description: Out-of-this-world infinity pools, bespoke spa journeys, sunset cruises and of course - fronds of lavish over-water villas that lead straight to a turquoise lagoon. Go to the Maldives expecting your every whim to be indulged and you’ll find that the staff are always one step ahead.
-    link:
 
   - title: A world beneath the water
     id: underwater
     description: With a bewildering array of fauna to be seen, from manta rays to whale sharks, plus wreck diving, dolphin-spotting and submarine adventures, the impossibly clear waters of the Maldives are an unforgettable thrill to explore.
-    link:
 
   - title: Maldivian fine dining
     id: dining
     description: Explore vibrant dishes influenced by the flavours of South India and Southeast Asia. Try freshly caught local seafood, drink from coconuts, tour on-island herb gardens and keep things interesting with signature dining, from rustic Italian pizzerias to oceanside sushi bars.
-    link:
 
 ---
 
@@ -51,13 +48,16 @@ topics:
     {% assign page-topics = page.topics %}
     {% for topic in page-topics %}
       <div class="bob">
-        <div class="bob__image">
-          <a href="{{site.baseurl}}/{{topic.link}}"><div class="bg-img bg-img--3-2 bg-img--rounded" style="background-image: url('{{site.baseurl}}/img/content/overview/{{topic.id}}.jpg');"></div></a>
-        </div>
+
+        <div class="bob__image bg-img bg-img--3-2 bg-img--rounded" style="background-image: url('{{site.baseurl}}/img/content/overview/{{topic.id}}.jpg');"></div>
+
         <div class="bob__text">
-          <div class="title title--bold title--kerning title--md title--upper {% cycle 'title--grad-blue', 'title--grad-cyan', 'title--grad-green'  %}">{{topic.title}}</div>
-          <p class="text--lg">{{topic.description}}</p>
+          <div class="line-length--lg">
+            <div class="title title--bold title--kerning title--md title--upper {% cycle 'title--grad-blue', 'title--grad-cyan', 'title--grad-green'  %}">{{topic.title}}</div>
+            <p class="text--lg">{{topic.description}}</p>
+          </div>
         </div>
+
       </div>
     {% endfor %}
   </div>

@@ -20,6 +20,8 @@ body, html { height: 100%; }
   -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.page__content { overflow: hidden; }
+
 // responsive images
 img {
   height: auto;

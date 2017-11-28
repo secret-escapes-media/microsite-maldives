@@ -10,6 +10,6 @@ layout: default
 
 <div class="page__content">
   {{ content }}
-</div>
 
-{% unless page.id == 'offers' %}{% include page/competition-promo.html %}{% endunless %}
+  {% unless page.id == 'offers' %}{% include page/competition-promo.html %}{% endunless %}
+</div>

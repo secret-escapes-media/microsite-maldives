@@ -90,3 +90,24 @@
   }
 }
 
+
+.review {
+  &__image {
+    @include bp(xxl){
+      width: 66% !important;
+      &-left { margin-left: -20% !important; }
+      &-right { margin-right: -20% !important; }
+    }
+  }
+  &__banner {
+    height: 300px;
+    @include bp(lg){ height: 500px; }
+  }
+}
+
+
+.message {
+  * + & { margin-top: $s2; }
+  padding: 1.5em 2em;
+  border-radius: 4px;
+}
