@@ -89,12 +89,12 @@ function search(){
 
 $('#searchForm').keypress(function(e){
   if (e.which == 13) {
-    event.preventDefault();
+    e.preventDefault();
     search();
   }
 });
 
-$('.header__search-btn').click(function(){
-  event.preventDefault();
+$('.header__search-btn').click(function(e){
+  e.preventDefault();
   search();
 });
